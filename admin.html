@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!--  meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <style>
+        .is__hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="headerAdmin">
+        <div class="header__logo"><i class="fas fa-cogs"></i> Admin Panel</div>
+        <div class="header__homeLogout">
+            <div class="home"><a href="index.html" style="color: #fff;"><i class="fas fa-home"></i> Home</a></div>
+            <div class="logout" style="color: #fff;"><i class="fas fa-power-off"></i> Sign Out</div>
+        </div>
+    </header>
+    <section class="main_content">
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-2 col-sm-12">
+                    <div class="main_content__left">
+                        <ul class="main_content__left__list">
+                            <li class="main_content__left__list__item">
+                                <i class="fas fa-home"></i> Quản lí
+                            </li>
+                            <li class="main_content__left__list__item sp">
+                                <i class="fab fa-product-hunt"></i> Sản phẩm
+                            </li>
+                            <li class="main_content__left__list__item tl">
+                                <i class="fas fa-braille"></i> Thể loại
+                            </li>
+                            <li class="main_content__left__list__item dh">
+                                <i class="fad fa-bags-shopping"></i><i class="fab fa-cc-apple-pay"></i> Đơn hàng
+                            </li>
+                            <li class="main_content__left__list__item kh">
+                                <i class="fas fa-users"></i> Khách hàng
+                            </li>
+
+                            <!-- <li class="main_content__left__list__item lh">
+                                <i class="fas fa-envelope-square"></i> Liên Hệ
+                            </li>
+
+                            <li class="main_content__left__list__item slider">
+                                <i class="fas fa-envelope-square"></i> Slider
+                            </li>
+                            <li class="main_content__left__list__item tt">
+                                <i class="fas fa-envelope-square"></i> Tin tức
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-12">
+                    <div class="main_content__right">
+                        <!-- san pham -->
+                        <div class="sanpham">
+                            <div class="product__container">
+                                <button class="addProduct btn-addProduct" data-toggle="modal" data-target="#modelId">
+                                    <i class="fas fa-plus"></i> Thêm Sản Phẩm
+                                </button>
+                                <input type="text" class="input__search" placeholder="Tìm Kiếm" />
+                            </div>
+                            <table class="table table_lisProduct">
+                                <thead>
+                                    <tr>
+                                        <th>Tên SP <i class="fas fa-sort-alpha-down-alt"></i></th>
+                                        <th>Thể loại <i class="fas fa-sort-alpha-down-alt"></i></th>
+
+                                        <th>Giá (vnđ)</th>
+                                        <th>Hiển thị</th>
+
+                                        <th>Thao Tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="listDsSP"></tbody>
+                            </table>
+                        </div>
+
+                        <!-- theloai -->
+
+                        <div class="theloai">
+                            <div class="product__container">
+                                <button class="addProduct btn-addProduct" data-toggle="modal" data-target="#themtl">
+                                    <i class="fas fa-plus"></i> Thêm Thể Loại
+                                </button>
+                                <input type="text" class="input__search" placeholder="Tìm Kiếm" />
+                            </div>
+                            <table class="table table_lisProduct">
+                                <thead>
+                                    <tr>
+                                        <th>Tên TL <i class="fas fa-sort-alpha-down-alt"></i></th>
+                                        <th>Tạo Bởi</th>
+                                        <th>Hiển thị</th>
+
+                                        <th>Thao Tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="listDsTL"></tbody>
+                            </table>
+                        </div>
+
+                        <!-- khach hang  -->
+                        <div class="khachhang">
+                            <div class="product__container">
+                                <h5>Danh Sách Khách Hàng</h5>
+                            </div>
+                            <table class="table table_lisProduct">
+                                <thead>
+                                    <tr>
+                                        <th>Họ</th>
+                                        <th>Tên</th>
+                                        <th>Email</th>
+                                        <th>Địa Chỉ</th>
+                                        <th>Avatar</th>
+                                        <th>Phone</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="listDsKH"></tbody>
+                            </table>
+                        </div>
+
+                        <!-- don hang  -->
+
+                        <div class="donhang">
+                            <div class="product__container">
+                                <h5>Danh Sách Đơn Hàng</h5>
+                            </div>
+                            <table class="table ">
+                                <thead>
+                                    <tr>
+                                        <th>Mã ĐH</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Trạng Thái</th>
+                                        <th>Tổng</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Ngày cập nhật</th>
+                                        <th>Thao Tác</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="listDsDH"></tbody>
+                            </table>
+                        </div>
+
+                        <!-- lienhe  -->
+                        <div class="lienhe">
+                            <div class="product__container">
+                                <h5>Danh Sách Liên Hệ</h5>
+
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Tên KH <i class="fas fa-sort-alpha-down-alt"></i></th>
+                                        <th>Địa chỉ</th>
+                                        <th>SDT</th>
+                                        <th>Thao Tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="listDsLH"></tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal  them san pham-->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="max-width: 80%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thêm Sản Phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form_themsp">
+                        <div class="form-group">
+                            <label for="">Mã Sản Phẩm</label>
+                            <input type="text" class="form-control masp" name="MaSP" id="" aria-describedby="helpId"
+                                placeholder="" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tên Sản Phẩm</label>
+                            <input type="text" class="form-control tensp" name="TenSP" id="" aria-describedby="helpId"
+                                placeholder="" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Giá</label>
+                            <span class="currencyinput">VND<input type="text" name="Gia" class="gia ml-3"
+                                    required /></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nội Dung</label>
+                            <input type="text" class="form-control noidung" name="NoiDung" id=""
+                                aria-describedby="helpId" placeholder="" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mã Thể Loại</label>
+                            <select class="form-control option_theloai" name="MaTL" id="">
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Hình Ảnh</label>
+                            <input type="file" class="form-control-file" name="file" id="file" placeholder=""
+                                aria-describedby="fileHelpId" required />
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Thêm</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal__capnhatsp" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document" style="max-width: 80%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cập Nhật Sản Phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form_updateSP">
+                        <div class="form-group">
+                            <label for="">Mã Sản Phẩm</label>
+                            <input type="text" class="form-control masp" name="MaSP" id="" aria-describedby="helpId"
+                                placeholder="" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tên Sản Phẩm</label>
+                            <input type="text" class="form-control tensp" name="TenSP" id="" aria-describedby="helpId"
+                                placeholder="" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Giá</label>
+                            <span class="currencyinput">VND<input type="text" name="Gia" class="gia  ml-3"
+                                    required /></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nội Dung</label>
+                            <input type="text" class="form-control noidung" name="NoiDung" id=""
+                                aria-describedby="helpId" placeholder="" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Hình Ảnh</label>
+                            <input type="file" class="form-control-file" name="file" id="file" placeholder=""
+                                aria-describedby="fileHelpId" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mã Thể Loại</label>
+                            <select class="form-control option_theloai" name="MaTL" id="" required>
+
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal them theloai -->
+    <div class="modal fade modal_theloai" id="themtl" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thêm Thể Loại</h5>
+                    <button type="button" class="close closeModal" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form_tl">
+                        <div class="form-group">
+                            <label for="">Mã Thể Loại</label>
+                            <input type="text" class="form-control matl" name="MaTL" id="" aria-describedby="helpId"
+                                placeholder="" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tên Thể Loại</label>
+                            <input type="text" class="form-control tentl" name="TenTL" id="" aria-describedby="helpId"
+                                placeholder="" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ảnh Thể Loại</label>
+                            <input type="file" class="form-control-file" name="file" id="" placeholder=""
+                                aria-describedby="fileHelpId" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-handle">
+                                Thêm
+                            </button>
+                            <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">
+                                Đóng
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal_chitietdonhang fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="./Js/admin.js"></script>
+    <script src="./Js/form_theloai.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+
+<style>
+    #myBtn {
+        background-color: rgb(58, 56, 56);
+        position: fixed;
+        bottom: 40px;
+        color: #fff;
+        padding: 5px 10px;
+        transition: opacity 0.5s ease-in-out 0s, right;
+        cursor: pointer;
+        right: 10px;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        transform: rotate(-90deg);
+
+    }
+
+    #myBtn:hover {
+        background-color: #555;
+    }
+</style>
+
+<body>
+
+
+    <header class="header">
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                        <i class="fas fa-phone"></i> Trực tuyến
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <i class="fas fa-newspaper"></i> Tin Tức
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <i class="fas fa-print"></i> In Hóa Đơn
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="user__container">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="logo">
+                            <img src="https://tansonnhatairport.vn/wp-content/uploads/2018/05/logo-tesla.png" alt=""
+                                class="image__logo img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search">
+                            <input type="text" class="input__search" placeholder="Nhập từ khóa tìm kiếm..">
+                            <div class="icon_search">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <!-- search__result -->
+                            <div class="search__result">
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="center call">
+                            Gọi mua hàng : <span class="call__number">1900 2164</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="cart_page.html" class="center cart">
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header class="header_mobile">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://tansonnhatairport.vn/wp-content/uploads/2018/05/logo-tesla.png" alt=""
+                    class="image__log" style="width: 40px;">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Trang chủ </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart_page.html">Giỏ hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Giỏ hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sign-in.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sign-up.html">Đăng kí</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm">
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="container">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.phucanh.vn/media/banner/03_Jun087a3b831c37be472bbca4ff39da582a.jpg"
+                            style="width: 100%;" alt="Los Angeles">
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="category">
+        <div class="container">
+            <div class="category__content">
+                <h2 class="heading">
+                    Thương hiệu
+                </h2>
+                <ul class="list__category">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="productList">
+        <div class="productList__content">
+            <div class="container">
+                <div class="row  listProduct ">
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="pagenumbertheloai text-center" style="margin: 10px 0;"></div>
+
+    </section>
+
+
+    <footer>
+        <div class="footer__content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="list__footer">
+                            <li class=" list__footer__heading list__footer__item">
+
+                                Thông tin công ty
+                            </li>
+                            <li class="list__footer__item">
+
+                                Giới thiệu công ty
+                            </li>
+
+                            <li class="  list__footer__item">
+
+                                Thông tin tuyển dụng
+                            </li>
+                            <li class="  list__footer__item">
+
+                                Điều khoản giao dịch
+                            </li>
+                            <li class="  list__footer__item">
+
+                                Chính sách bảo mật thông tin khách hàng
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list__footer">
+                            <li class=" list__footer__heading list__footer__item">
+
+                                Quy định & chính sách
+                            </li>
+                            <li class="list__footer__item">
+
+                                Chính sách kinh doanh
+                            </li>
+
+
+                            <li class="  list__footer__item">
+
+                                Ưu đãi cho khách hàng Game-Net
+                            </li>
+
+                            <li class="  list__footer__item">
+
+                                Ưu đãi cho khách hàng doanh nghiệp
+                            </li>
+                            <li class="  list__footer__item">
+
+                                Chính sách vận chuyển và giao nhận
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list__footer">
+                            <li class=" list__footer__heading list__footer__item">
+
+                                Hỗ trợ khách hàng
+                            </li>
+                            <li class="list__footer__item">
+
+                                Hướng dẫn mua hàng online
+                            </li>
+
+                            <li class="  list__footer__item">
+
+                                Hướng dẫn mua hàng trả góp
+                            </li>
+                            <li class="  list__footer__item">
+
+                                Phương thức thanh toán
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="noti">
+                            <img src="https://www.phucanh.vn/template/2017/images/dathongbao.png" alt="">
+                        </div>
+                        <div class="sendEmail">
+                            <input type="text" class="inputEmail" placeholder="nhập địa chỉ email của bạn">
+                            <button class="btn_send">Gửi ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Up <i class="fas fa-long-arrow-alt-right"></i>
+
+    </button>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="./Js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
